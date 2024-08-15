@@ -1,0 +1,18 @@
+/* set roboto
+align icons */
+@font-face {
+    font-family: roboto-reg;
+    src: url(assets/Roboto/Roboto-Regular.ttf);
+}
+
+* {
+    font-family: roboto-reg, 'Times New Roman', Times, serif;
+}
+
+.dashboard > svg{
+    height: 60px;
+}
+
+.nav > svg, .set > svg, .search-container > svg, .project > svg{
+    height: 40px;
+}
