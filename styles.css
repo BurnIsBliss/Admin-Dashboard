@@ -5,14 +5,90 @@ align icons */
     src: url(assets/Roboto/Roboto-Regular.ttf);
 }
 
+@font-face {
+    font-family: roboto-bold;
+    src: url(assets/Roboto/Roboto-Bold.ttf);
+    font-weight: 600;
+}
+
 * {
     font-family: roboto-reg, 'Times New Roman', Times, serif;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+:root {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-rows: 1fr 2fr 2fr;
+}
+
+.sidebar{
+    font-family: roboto-bold, sans-serif;
+    grid-row: 1 / -1;
+    background-color: #0ea5e9;
+    color: white;
+    fill: white;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    padding-left: 18px;
+    padding-top: 10px;
+    font-size: 30px;
+}
+
+.dashboard {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    font-weight: 600;
+}
+
+.navigation, .settings {
+    display: flex;
+    gap: 15px;
+    flex-direction: column;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.nav, .set {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+
+
+
+
+.top-bar {
+    grid-column: 2 / -1;
+}
+
+.project-container{
+    grid-column: 2 / 3;
+    grid-row: 2 / -1;
+}
+
+.announcements-container{
+    grid-column: 3 / -1;
+}
+
+.trending{
+    grid-column: 3 / 4;
 }
 
 .dashboard > svg{
-    height: 60px;
+    height: 42px;
 }
 
 .nav > svg, .set > svg, .search-container > svg, .project > svg{
-    height: 40px;
+    height: 20px;
 }
