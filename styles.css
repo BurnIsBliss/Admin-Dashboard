@@ -8,8 +8,15 @@ align icons */
 @font-face {
     font-family: roboto-bold;
     src: url(assets/Roboto/Roboto-Black.ttf);
-    font-weight: bolder;
+    font-weight: 700;
 }
+
+@font-face {
+    font-family: roboto-black;
+    src: url(assets/Roboto/Roboto-Black.ttf);
+    font-weight: 900;
+}
+
 
 * {
     font-family: roboto-reg, 'Times New Roman', Times, serif;
@@ -75,22 +82,22 @@ body {
     height: 20px;
 }
 
-/* Sidebar window design changes end here  */
+/* Sidebar window design changes ends here  */
 
-/* Styling related to top-bar  */
+/* Styling related to top-bar */
 
 .top-bar {
     grid-column: 2 / -1;
-    padding: 15px 35px;
+    padding: 10px 35px;
+    box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
 }
 
 .search-container {
     display: flex;
     gap: 15px;
     align-items: center;
-    margin-bottom: 20px;
     font-size: x-large;
-    font-weight: bolder;
+    font-weight: 700;
 }
 
 .search-bar {
@@ -101,14 +108,50 @@ body {
     margin-right: 60px;
 }
 
+.greeting-container {
+    display: flex;
+    align-items: center;
+}
+
+span {
+    font-size: 15px;
+}
+
+.greeting-container > .name {
+    font-size: 22px;
+    font-family: roboto-black, sans-serif;
+    margin-right: 308px;
+}
+
+.button-container {
+    width: 39%;
+}
+
+button {
+    font-size: 18px;
+    color: white;
+    background-color: #0ea5e9;
+    height: 38px;
+    width: 100px;
+    margin: 8px;
+    border-radius: 25px;
+    border: none;
+}
+
 .search-container > img {
     height: var(--userProfileSize);
+}
+
+.greeting-container > img {
+    height: calc(var(--userProfileSize) + 20px);
+    margin-right: 5px;
 }
 
 .search-container > svg, .project > svg{
     height: 30px;
 }
 
+/* Design changes relating to top-bar ends here  */
 
 .project-container{
     grid-column: 2 / 3;
