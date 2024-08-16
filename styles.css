@@ -27,14 +27,14 @@ align icons */
 
 :root {
     height: 100%;
-    --userProfileSize: 60px;
+    --userProfileSize: 50px;
 }
 
 body {
     height: 100%;
     display: grid;
     grid-template-columns: 1fr 3fr 1fr;
-    grid-template-rows: 1fr 2fr 2fr;
+    grid-template-rows: 1fr 50px 2fr 50px 2fr;
 }
 
 /* Styling associated with the "Sidebar window" */
@@ -128,11 +128,11 @@ span {
 }
 
 button {
-    font-size: 18px;
+    font-size: 16px;
     color: white;
     background-color: #0ea5e9;
-    height: 38px;
-    width: 100px;
+    height: 34px;
+    width: 90px;
     margin: 8px;
     border-radius: 25px;
     border: none;
@@ -147,15 +147,65 @@ button {
     margin-right: 5px;
 }
 
-.search-container > svg, .project > svg{
+.search-container > svg, .project > .icons-project > svg{
     height: 30px;
 }
 
 /* Design changes relating to top-bar ends here  */
 
+/* CSS relating to project container */
+
 .project-container{
     grid-column: 2 / 3;
-    grid-row: 2 / -1;
+    grid-row: 3 / -1;
+}
+
+.project-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    background-color: #d1d5db;
+    gap: 10px;
+    padding: 0 10px;
+    justify-items: center;
+}
+
+.project {
+    display: grid;
+    padding: 30px 24px 10px 25px;
+    border-radius: 14px;
+    background-color: white;
+    box-shadow: inset 10px 0 orange;
+    gap: 32px;
+    /* border: 8px solid white;
+    border-left-color: orange; */
+}
+
+.heading-projects {
+    display: grid;
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    background-color: #d1d5db;
+    font-family: roboto-bold, sans-serif;
+    font-size: large;
+    padding-left: 10px;
+    padding-bottom: 5px;
+    align-items: end;
+}
+
+.icons-project{
+    display: flex;
+    gap: 20px;
+    justify-content: end;
+}
+
+p {
+    color: #64748b;
+}
+
+b {
+    font-family: roboto-bold, sans-serif;
+    color: black;
 }
 
 .announcements-container{
