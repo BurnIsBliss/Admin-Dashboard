@@ -7,8 +7,8 @@ align icons */
 
 @font-face {
     font-family: roboto-bold;
-    src: url(assets/Roboto/Roboto-Bold.ttf);
-    font-weight: 600;
+    src: url(assets/Roboto/Roboto-Black.ttf);
+    font-weight: bolder;
 }
 
 * {
@@ -20,6 +20,7 @@ align icons */
 
 :root {
     height: 100%;
+    --userProfileSize: 60px;
 }
 
 body {
@@ -28,6 +29,8 @@ body {
     grid-template-columns: 1fr 3fr 1fr;
     grid-template-rows: 1fr 2fr 2fr;
 }
+
+/* Styling associated with the "Sidebar window" */
 
 .sidebar{
     font-family: roboto-bold, sans-serif;
@@ -64,13 +67,48 @@ body {
     gap: 15px;
 }
 
+.dashboard > svg{
+    height: 42px;
+}
 
+.nav > svg, .set > svg {
+    height: 20px;
+}
 
+/* Sidebar window design changes end here  */
 
+/* Styling related to top-bar  */
 
 .top-bar {
     grid-column: 2 / -1;
+    padding: 15px 35px;
 }
+
+.search-container {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    margin-bottom: 20px;
+    font-size: x-large;
+    font-weight: bolder;
+}
+
+.search-bar {
+    height: 30px;
+    width: 55%;
+    background-color: #d1d5db;
+    border-radius: 25px;
+    margin-right: 60px;
+}
+
+.search-container > img {
+    height: var(--userProfileSize);
+}
+
+.search-container > svg, .project > svg{
+    height: 30px;
+}
+
 
 .project-container{
     grid-column: 2 / 3;
@@ -83,12 +121,4 @@ body {
 
 .trending{
     grid-column: 3 / 4;
-}
-
-.dashboard > svg{
-    height: 42px;
-}
-
-.nav > svg, .set > svg, .search-container > svg, .project > svg{
-    height: 20px;
 }
